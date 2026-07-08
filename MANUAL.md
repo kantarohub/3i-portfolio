@@ -68,6 +68,3 @@ portfolio/
 2. **フォールバック戦略**: `.glb` は `<model-viewer>` で表示、非対応ブラウザでは静止画プレビュー+「3Dで見る」ボタンを表示。UX分岐を明確化
 3. **CDN＆キャッシュ制御**: Cloudflare / AWS S3 + CloudFront でグローバル配信。`Cache-Control: public, max-age=31536000, immutable` を設定し、ハッシュ付きURLでバージョン管理
 4. **AR環境の分離**: `.usdz` はiOS専用。Android/PC向けには`.glb`またはWebXR対応ビューアを提供。プラットフォーム依存をドキュメント化し、開発負荷を低減
-
-このマニュアルをリポジトリ内の `docs/MANUAL.md` として保存し、チーム開発や外部委託時に共有することで、品質バラつきと手戻りを90%以上削減できます。  
-特定のフレームワーク（Next.js, React Three Fiber, Vue等）向けの設定例や、CI/CDパイプラインへの自動最適化連携手順が必要な場合はお知らせください。
